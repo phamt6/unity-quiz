@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c726b8542e14fcaa6364fa72b95159, type: 3}
   m_Name: Question 2
   m_EditorClassIdentifier: 
-  question: 
+  question: Hottest planet in the Solar system?
   answers:
-  - 
-  - 
-  - 
-  - 
+  - Earth
+  - Venus
+  - Mars
+  - Sun
+  correctAnswerIndex: 1
