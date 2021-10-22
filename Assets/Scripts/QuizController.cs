@@ -13,13 +13,14 @@ public class QuizController : MonoBehaviour
     [SerializeField] Sprite defaultAnswerSprite;
 
     const string CORRECT_ANSWER = "Correct answer!";
-    const string INCORRECT_ANSWER = "Incorrect answer ...";
+    const string INCORRECT_ANSWER = "Incorrect. The correct answer is: ";
     const float NEW_QUESTION_FETCH_DELAY = 1.5f;
 
     private int currentQuestionIndex = 0;
     private QuestionSO questionObj;
 
-    private void Start() {
+    private void Start()
+    {
         FetchNewQuestion();
     }
 
@@ -33,7 +34,7 @@ public class QuizController : MonoBehaviour
         }
         else
         {
-            questionText.text = INCORRECT_ANSWER;
+            questionText.text = INCORRECT_ANSWER + questionObj.GetCorrectAnswer();
         }
 
         SetBtnInteraction(false);
@@ -73,7 +74,7 @@ public class QuizController : MonoBehaviour
 
     public void SetBtnInteraction(bool state)
     {
-        for (int i=0; i<AnswerButtons.Length; i++)
+        for (int i = 0; i < AnswerButtons.Length; i++)
         {
             AnswerButtons[i].GetComponent<Button>().interactable = state;
         }

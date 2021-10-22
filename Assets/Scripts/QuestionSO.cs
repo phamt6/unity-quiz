@@ -23,8 +23,8 @@ public class QuestionSO : ScriptableObject {
         return chosenIndex == correctAnswerIndex;
     }
 
-    public int GetCorrectAnswer()
+    public string GetCorrectAnswer()
     {
-        return correctAnswerIndex;
+        return answers[correctAnswerIndex];
     }
 }
